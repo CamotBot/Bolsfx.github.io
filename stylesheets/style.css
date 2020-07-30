@@ -19,6 +19,13 @@ body {
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
+#Footer {
+	text-align: right;
+	background-color: black;
+	color: white;
+	padding: 15px;
+}
+
 #Site_Title{
 	transition: color 0.4s;
 	color: black;
@@ -26,11 +33,11 @@ body {
 	display: inline-block; 
 }
 
-#Site_Title:hover, #Nav li a:hover{
+#Site_Title:hover, #Header_Nav li a:hover, #Footer_Nav li a:hover{
 	color: grey;
 }
 
-#Nav {
+#Header_Nav {
     list-style-type: none;	
     display: inline-block;
 	position: absolute;
@@ -39,18 +46,38 @@ body {
 	font-weight: 600;
 }
 
-#Nav li {
+#Header_Nav li {
 	float: left;
 	padding: 7px 10px;
 }
 
-#Nav li a {
+#Header_Nav li a {
 	transition: color 0.4s;
 	text-decoration: none;
 	color: black;
 }
 
-#active {
+#Footer_Nav {
+    list-style-type: none;	
+    display: inline-block;
+	position: absolute;
+	left: -18px;
+	top: 951.2px;
+	font-weight: 600;
+}
+
+#Footer_Nav li {
+	float: left;
+	padding: 7px 10px;
+}
+
+#Footer_Nav li a {
+	transition: color 0.4s;
+	text-decoration: none;
+	color: white;
+}
+
+.active {
 	color: grey !important;
 }
 
@@ -65,13 +92,17 @@ body {
 }
 
 @media screen and (max-width: 1120px) and (min-width: 0px) {
-  #Nav {
+  #Header_Nav {
 	  left: 130px !important;
+  }
+  
+  #Footer_Nav {
+	  left: -35px !important;
   }
 }
 
 @media screen and (max-width: 1900px) and (min-width: 1120px) {
-  #Nav {
+  #Header_Nav {
 	  left: 930px !important;
   }
 }
